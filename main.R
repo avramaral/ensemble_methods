@@ -34,8 +34,8 @@ if (max(S) > K) {
     ind_idx <- paste('k_', k, sep = '')
     initial_test <- data_size - K + k
     ind_models_result[[ind_idx]] <- fit_ind_models(data = data, geom = geom, data_size = data_size, initial_test = initial_test, n_sim = n_sim)
-    # saveRDS(ind_models_result[[ind_idx]], file = 'rdata/ind_idx.rds')
-    # readRDS(file = 'rdata/ind_idx.rds')
+    # saveRDS(ind_models_result[[ind_idx]], file = paste('rdata/', ind_idx, '.rds', sep = ''))
+    # readRDS(file = paste('rdata/', ind_idx, '.rds', sep = ''))
     for (s in S) {
       if (s <= (data_size - initial_test + 1)) {
         ens_idx <- paste('k_', k, '_s_', s, sep = '')
